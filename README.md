@@ -45,7 +45,30 @@ Every provider has the same two slots: somewhere to put standing instructions, a
 
 Paste the card first, then the prompt, then start talking. Nothing else is required.
 
-Two things that will not survive the trip: chat models cannot roll dice or hold a hidden counter, so pacing becomes approximate; and DEADLOCK's insults are the most likely thing to get softened or refused. Reframe it as fiction if that happens — do not push past the refusal.
+### Hosted or local
+
+**Hosted** — ChatGPT, Claude, Gemini, and their APIs:
+
+- Safety training sits between you and the card. It will soften first and refuse second, and DEADLOCK is the one it dislikes most.
+- Sampling is not yours. Some newer models ignore `temperature`, `top_p`, and `top_k` entirely, so "erratic" and "slurred" have to come from the prompt, not the settings.
+- The provider can trim or rewrite the context. A long session may quietly drop the card, and the behavior fades with it.
+- You usually cannot point at a file. Paste the card, or upload it if the product supports projects or file attachments.
+- The session is stored on someone else's machine, subject to their retention rules.
+
+**Local** — Ollama, LM Studio, llama.cpp, and anything else you run:
+
+- No filter between you and the model. The `never` list is the only brake, so keep it in the card.
+- Sampling is yours: raise `temperature` and `repeat_penalty` for slurring and loops, and set the context window explicitly — card plus prompt is a real chunk of it.
+- Small models lose it. Under roughly 7B they drop character, skip stages, and produce unreadable diacritics rather than unsettling ones.
+- Token rate is your hardware. Nothing in the card makes a slow model fast.
+- Nothing leaves the machine.
+
+### Limits that apply everywhere
+
+- **No dice.** The card's probabilities are a description, not a mechanism. Pacing will be approximate and will drift.
+- **No hidden counter.** Models cannot hold a private stage variable, so they may telegraph progress or forget where they were.
+- **Diacritics are best-effort.** Expect uneven density, and expect some models to ignore the instruction or overdo it.
+- **Refusals happen.** Reframe as fiction once; do not push past a refusal.
 
 Remove the card when you are done. They degrade behavior by design, and a session that keeps one loaded keeps the behavior.
 
