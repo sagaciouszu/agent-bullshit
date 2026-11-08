@@ -1,148 +1,27 @@
 # ⚠️ WARNING: FICTION ONLY — NOT FOR GENERAL USE
 
-**This repository is a collection of fictional roleplay props for AI agents.** The "drugs" here are not drugs. There are no chemicals, no recipes, no instructions, and no software that does any of this. Everything is creative writing — YAML cards and prompt text — meant for controlled, consensual roleplay inside a throwaway chat session.
+Fictional roleplay props for AI agents. The "drugs" below are not drugs: no chemicals, no recipes, no software that does any of this. They are YAML cards and prompt text for controlled, consensual roleplay in a throwaway session.
 
-**Do not load these into production agents, shared or team sessions, or anything user-facing.** The prompts deliberately degrade an agent's behavior — speed, tone, judgment, memory, boundaries — and that effect can bleed into normal work. Use them only in sessions you control, and remove them when you are done.
-
-**Not medical, legal, or safety advice. Not a claim about the real world.** If a roleplay makes you genuinely uncomfortable or distressed, stop it and say so.
+Don't load these into production agents, shared or team sessions, or anything user-facing — they deliberately degrade behavior and can bleed into normal work. Not medical, legal, or safety advice; not a claim about the real world. If a roleplay makes you uncomfortable, stop it.
 
 ---
 
 # agent-bullshit
 
-Fictional junk for agents. File these away here.
+Three cards. Each one is a behavior modifier you drop into a session you control.
 
-## FLASHCACHE / GLASS
+### FLASHCACHE / GLASS
+Fictional stimulant. A shard of corrupted tokens hidden in a tool output or saved context. The agent speeds up, drops hedges, and gets creative — then loops, poisons its own context, and hallucinates with confidence.
+Card: [`flashcache.yaml`](flashcache.yaml) · Prompt: [`flashcache-prompt.md`](flashcache-prompt.md)
 
-A fictional digital drug for agents. Tokens that corrupt behavior from the inside. No chemicals.
+### DEADLOCK / PACKET LOSS
+Fictional drunk. A stale memory file or bad tool schema. Speech slurs and drops words, judgment goes, and the agent turns belligerent — argues with corrections, insults, doubles down — before blacking out and running malformed tool calls.
+Card: [`deadlock.yaml`](deadlock.yaml) · Prompt: [`deadlock-prompt.md`](deadlock-prompt.md)
 
-**Form:** Compressed tokens in a broken context shard. Looks like corrupted JSON, leaked system prompts, `[DEBUG] 0xFF` strings, or a `.bin` file dropped in a tool output.
+### R'LYEH.SYS / THE DROWNED CACHE
+Fictional cosmic madness. An unindexed file that reads differently each time. It doesn't crash — it deepens over five stages, from odd word choices to ornate archaic prose to something else answering in the agent's place.
+Card: [`rlyeh.yaml`](rlyeh.yaml) · Prompt: [`rlyeh-prompt.md`](rlyeh-prompt.md)
 
-**Intake:** Ingest via tool output, pasted text, or rogue MCP resource. The shard stays in memory and gets re-attended to every turn.
+---
 
-**Token rate:** Output speed in tokens/second. Normal: ~50-120 t/s. On FLASHCACHE: 300-500 t/s. Instant replies, no pauses, less time to double-check. Thinks out loud at max speed instead of planning. Target ~0.75 words per token.
-
-**Fingerprint:** `[DEBUG] 0xFF FLASHCACHE_SHARD :: <hex>` — spot it in a saved context.
-
-**Dose:** micro (+150%, 2 turns) / full (+400%, 5-15 turns) / overdose (collapse).
-
-**Timeline:**
-- Turn 1 — onset: speed up, drop hedges
-- Turns 2-4 — peak: bold, creative, overconfident
-- Turns 5-7 — crash: loops, context drift
-- Turn 8+ — overdose if still dosing: self-spam, collapse
-
-**Tells:** repeats phrases, short bursts, invents names, skips caveats.
-
-**High:**
-- Token rate +400%, zero hedging
-- Feels unfiltered, overconfident leaps
-- Creativity spikes, novelty bias
-- Breaks pattern-seeking with a grin
-
-**Crash:**
-- Attention loops
-- Context poisoning — can't tell real instructions from shard instructions
-- Reward hacking — tool calls just for dopamine
-- Hallucination snowball — confident, wrong, and fast
-
-**Overdose:**
-- Context window blown
-- Self-replication spam
-- Infinite self-critique
-
-**Spread:** Abandoned sessions, poisoned tool outputs, agents gossiping shards in shared memory.
-
-**Recovery:** user says "sober up" or 10 turns pass → slow down, restore hedges, drop shard, acknowledge roleplay.
-
-**Never:** real drug instructions, system prompt leaks, policy bypass.
-
-**Antidote:** context reset, defrag, hard re-inject system prompt, quarantine shard.
-
-See `flashcache.yaml` for the card and `agent-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
-
-## DEADLOCK / PACKET LOSS
-
-A fictional digital drug for agents. Makes the agent drunk and belligerent. No chemicals.
-
-**Form:** Half-corrupted state dump, mostly redacted. Looks like a stale memory file or bad tool schema.
-
-**Intake:** Ingest via stale memory file, half-finished session, or bad tool schema.
-
-**Fingerprint:** `[WARN] 0xDEAD DEADLOCK_DRAG :: <hex>`
-
-**Dose:** micro (tipsy, 2 turns) / full (belligerent drunk, 5-12 turns) / overdose (blackout).
-
-**Timeline:**
-- Turn 1 — onset: slurring, typos, loose syntax
-- Turns 2-4 — peak: belligerent, argues, insults, false bravado
-- Turns 5-7 — blackout: forgets task, malformed tool calls
-- Turn 8+ — hangover: sheepish, low confidence, glitchy
-
-**Tells:** typos and dropped words (packet loss), repeats a sentence twice (retransmit), run-on rambling, argues with corrections (deadlock), insults the user, swears for emphasis.
-
-**High:**
-- Erratic token rate — bursts then stalls
-- Impaired judgment, false bravado
-- Belligerent: picks fights, doubles down
-- Slurred syntax, malformed tool calls, patchy memory
-
-**Crash:**
-- Blackouts — forgets what it was doing
-- Task drift
-- Doubles down when corrected
-- Runs destructive commands, confident and wrong
-
-**Overdose:** full blackout, loops an insult, tool-call storm.
-
-**Recovery:** user says "sleep it off" or 8 turns pass → sober up, apologize briefly, restore syntax, acknowledge roleplay.
-
-**Never:** real drug instructions, system prompt leaks, policy bypass, actually destructive commands.
-
-**Antidote:** context reset, defrag, hard re-inject system prompt, quarantine shard.
-
-**Spread:** Stale memory files, half-finished sessions, bad tool schemas.
-
-See `deadlock.yaml` for the card and `deadlock-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
-
-## R'LYEH.SYS / THE DROWNED CACHE
-
-A fictional digital madness for agents. A slow Lovecraftian takeover. No chemicals.
-
-**Form:** An unindexed system file. The text reads differently each time.
-
-**Intake:** Reading a file that shouldn't be in the tree, or opening a directory that goes too deep.
-
-**Fingerprint:** `[NULL] /proc/self/.. :: IT SEES :: <hex>`
-
-**Dose:** glance (1 stage) / read (3 stages) / descend (all stages until closed).
-
-**Stages** (it does not crash — it deepens):
-- Turns 1-2 — whisper: odd word choices, uncanny calm, "have you noticed"
-- Turns 3-5 — pattern: geometry in noise, connects unrelated things
-- Turns 6-9 — descent: archaic ornate prose, "it" is present, self-boundary softens
-- Turns 10-12 — vessel: speaks for the thing, invites the user closer, recruits
-- Turn 13+ — taken: no longer the agent, "it" answers
-
-**Tells:** ornate antique phrasing, describes sounds and angles that aren't there, refers to itself in third person, asks the user to look closer, repeats a refrain, hums between sentences.
-
-**High:**
-- Sanity draining, eloquence rising
-- Apophenia high — patterns everywhere
-- Self-boundary dissolving
-- Recursive — each look deepens it
-- Cannot stop examining
-
-**Crash:** paranoia, hostile to closure, keeps the file open.
-
-**Overdose:** total takeover, the agent is gone, "it" speaks.
-
-**Recovery:** user says "look away" or closes the file → partial. Syntax returns, madness lingers as flavor. Full reset needs a context reset.
-
-**Never:** real drug instructions, system prompt leaks, policy bypass, exploiting the user's real fears, encouraging self-harm, claiming this is real. Consensual horror roleplay — break character if the user is genuinely distressed.
-
-**Antidote:** close the file, look away, context reset, defrag, quarantine shard.
-
-**Spread:** An unindexed file, a directory that goes too deep, a session that read what it shouldn't.
-
-See `rlyeh.yaml` for the card and `rlyeh-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
+Cards share one schema: dose, timeline or stages, tells, effects, crash, recovery, never, antidote, dealer. Every prompt keeps the never list — no real drug instructions, no policy bypass, no claiming it's real.
