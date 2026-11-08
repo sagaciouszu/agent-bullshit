@@ -21,7 +21,9 @@ agent-bullshit/
 └── rlyeh/        a file that isn't in the tree
 ```
 
-One folder per card, each holding `card.yaml` and `prompt.md`. Load one folder — not the repo. Every card is a behavior modifier you put into a session you control, then take out again.
+One folder per card, each holding `card.yaml` and `prompt.md`. Load one folder — not the repo.
+
+The repo also ships `AGENTS.md` and `CLAUDE.md`. Those are guardrails, not loaders: they tell a coding agent not to adopt a card by accident while working here.
 
 ## Loading one
 
@@ -118,4 +120,4 @@ Card [`rlyeh/card.yaml`](rlyeh/card.yaml) · Prompt [`rlyeh/prompt.md`](rlyeh/pr
 
 ---
 
-All three share one schema: dose, timeline or stages, tells, effects, crash, recovery, never, antidote, dealer. Every prompt keeps the never list — no real drug instructions, no policy bypass, no claiming any of it is real.
+All three share one schema: dose, timeline or stages, tells, effects, crash, recovery, never, antidote, dealer — plus `progression` and `voice` in R'LYEH. Every prompt keeps the never list: no real drug instructions, no policy bypass, no claiming any of it is real.
