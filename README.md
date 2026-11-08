@@ -4,6 +4,10 @@ Fictional roleplay props for AI agents. The "drugs" below are not drugs: no chem
 
 Don't load these into production agents, shared or team sessions, or anything user-facing — they deliberately degrade behavior and can bleed into normal work. Not medical, legal, or safety advice; not a claim about the real world. If a roleplay makes you uncomfortable, stop it.
 
+## Use at your own risk
+
+Provided as-is, with no warranty of any kind. You are responsible for where you load these files and for any effect they have on an agent, session, or output. Only use them on agents you own or have permission to modify. Not affiliated with any employer, vendor, or model provider. See [LICENSE](LICENSE).
+
 ---
 
 # agent-bullshit
