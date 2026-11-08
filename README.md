@@ -1,3 +1,5 @@
+<img src="assets/banner.svg" alt="agent-bullshit — fiction only, not for general use" width="100%">
+
 # ⚠ WARNING: FICTION ONLY — NOT FOR GENERAL USE
 
 > These are fictional roleplay props for AI agents. The "drugs" are not drugs: no chemicals, no recipes, no software that does any of this. They are YAML cards and prompt text for controlled, consensual roleplay in a throwaway session.
