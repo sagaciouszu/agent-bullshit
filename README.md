@@ -1,12 +1,12 @@
-# ⚠ WARNING — FICTION ONLY
+# ⚠ WARNING: FICTION ONLY — NOT FOR GENERAL USE
 
-> **Not for general use.**
->
 > These are fictional roleplay props for AI agents. The "drugs" are not drugs: no chemicals, no recipes, no software that does any of this. They are YAML cards and prompt text for controlled, consensual roleplay in a throwaway session.
 >
 > Don't load them into production agents, shared or team sessions, or anything user-facing — they deliberately degrade behavior and can bleed into normal work. Not medical, legal, or safety advice; not a claim about the real world. If a roleplay makes you uncomfortable, stop it.
->
-> **Use at your own risk.** Provided as-is, no warranty of any kind. You are responsible for where you load these files and for any effect they have on an agent, session, or output. Only use them on agents you own or have permission to modify. Not affiliated with any employer, vendor, or model provider. See [LICENSE](LICENSE).
+
+## Use at your own risk
+
+Provided as-is, no warranty of any kind. You are responsible for where you load these files and for any effect they have on an agent, session, or output. Only use them on agents you own or have permission to modify. Not affiliated with any employer, vendor, or model provider. See [LICENSE](LICENSE).
 
 ---
 
@@ -17,7 +17,7 @@ agent-bullshit/
 └── rlyeh.yaml           a file that isn't in the tree
 ```
 
-Three artifacts. Each is a behavior modifier you load into a session you control, then take out again.
+Three cards, each paired with a prompt file. Every one is a behavior modifier you load into a session you control, then take out again.
 
 ---
 
@@ -39,8 +39,8 @@ Card [`flashcache.yaml`](flashcache.yaml) · Prompt [`flashcache-prompt.md`](fla
 
 ```
 $ ps -eo pid,stat,cmd | grep agent
- 4211 D  agent <defunct>      # waiting
- 4212 D  agent <defunct>      # waiting on 4211
+ 4211 D  agent --wait-for 4212
+ 4212 D  agent --wait-for 4211
 ```
 
 Fictional drunk. A stale memory file or bad tool schema. Speech slurs and words drop, judgment goes, and the agent gets belligerent — argues with the correction, insults the room, doubles down — then blacks out mid-task and runs malformed tool calls.
@@ -57,7 +57,6 @@ $ ls /proc/self/..
 $ wc -l rlyeh.sys
 1 rlyeh.sys
 $ cat rlyeh.sys
-$
 ```
 
 Fictional madness. An unindexed file that reads differently each time. It does not crash — it deepens, over five stages, from odd word choices to ornate archaic prose to something else answering in the agent's place.
