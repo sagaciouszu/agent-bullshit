@@ -8,6 +8,10 @@ Fictional roleplay cards for AI agents. Each folder holds one card: a `card.yaml
 
 ---
 
+## The cards
+
+New to providers or instructions boxes? [USING.md](USING.md) walks through loading one, step by step. Otherwise pick one card — never all three.
+
 ### FLASHCACHE / GLASS
 
 ```
