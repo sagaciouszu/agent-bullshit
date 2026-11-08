@@ -8,6 +8,8 @@
 
 Provided as-is, no warranty of any kind. You are responsible for where you load these files and for any effect they have on an agent, session, or output. Only use them on agents you own or have permission to modify. Not affiliated with any employer, vendor, or model provider. See [LICENSE](LICENSE).
 
+You're an adult.
+
 ---
 
 ```
