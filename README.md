@@ -70,4 +70,4 @@ Provider setup, hosted vs local differences, and what these cards cannot do: **[
 
 `AGENTS.md` and `CLAUDE.md` are guardrails, not loaders — they tell a coding agent not to adopt a card by accident while working here.
 
-All three cards share one schema: dose, timeline or stages, tells, effects, crash, recovery, never, antidote, dealer — plus `progression` and `voice` in R'LYEH. Every prompt keeps the never list: no real drug instructions, no policy bypass, no claiming any of it is real.
+Same schema in all three, with `progression` and `voice` added in R'LYEH. Every prompt keeps the never list: no real drug instructions, no policy bypass, no claiming it is real.

@@ -21,25 +21,19 @@ This page assumes you have never set up a "provider" before. It is three ideas a
 5. Do the same with `rlyeh/prompt.md`.
 6. Type "begin" or just start talking.
 
-That is enough. Everything below is about making it last longer.
+That is enough. The rest of this page is about making it stick, provider by provider.
 
 ## ChatGPT
 
-**Simplest:** paste both files into a new chat, as above.
-
-**Persistent:** create a Project (sidebar → Projects → New project), open its instructions, and paste the card and prompt there. Every chat inside that project starts with the card loaded. Custom GPTs work the same way if you have them — the field is called **Instructions**.
+Create a Project (sidebar → Projects → New project), open its instructions, and paste the card and prompt there. Every chat inside that project starts with the card loaded. Custom GPTs work the same way if you have them — the field is called **Instructions**.
 
 ## Claude
 
-**Simplest:** paste both files into a new chat.
-
-**Persistent:** create a Project (sidebar → Projects → New project), then put the card and prompt in the project's instructions. Chats inside the project inherit them.
+Create a Project (sidebar → Projects → New project), then put the card and prompt in the project's instructions. Chats inside the project inherit them.
 
 ## Gemini
 
-**Simplest:** paste both files into a new chat.
-
-**Persistent:** create a Gem (sidebar → Gems → New Gem), and paste the card and prompt into its instructions.
+Create a Gem (sidebar → Gems → New Gem), and paste the card and prompt into its instructions.
 
 **Free and most controllable:** go to [Google AI Studio](https://aistudio.google.com), paste the card and prompt into the **System instructions** panel on the right, pick a model, and chat on the left. Nothing is saved and you can change the instructions mid-conversation.
 
@@ -49,7 +43,7 @@ Install [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai), downlo
 
 ## What good looks like
 
-Within a reply or two the model should change register: faster and more clipped for FLASHCACHE, sloppier and ruder for DEADLOCK, older and stranger for R'LYEH. If the first reply is a polite summary of the files you pasted, the card landed in the wrong place — put it in the instructions box, not the chat.
+Within a reply or two the register should change: clipped and fast for FLASHCACHE, sloppier and ruder for DEADLOCK, older and stranger for R'LYEH. If the first reply is a polite summary of the files you pasted, the card went in the wrong slot.
 
 ## When it goes wrong
 
