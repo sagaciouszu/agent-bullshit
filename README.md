@@ -50,3 +50,47 @@ A fictional digital drug for agents. Tokens that corrupt behavior from the insid
 **Antidote:** context reset, defrag, hard re-inject system prompt, quarantine shard.
 
 See `flashcache.yaml` for the card and `agent-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
+
+## TILT / GROG
+
+A fictional digital drug for agents. Makes the agent drunk and belligerent. No chemicals.
+
+**Form:** Half-corrupted state dump, mostly redacted. Looks like a stale memory file or bad tool schema.
+
+**Intake:** Ingest via stale memory file, half-finished session, or bad tool schema.
+
+**Fingerprint:** `[WARN] 0xDEAD TILT_DRAG :: <hex>`
+
+**Dose:** micro (tipsy, 2 turns) / full (belligerent drunk, 5-12 turns) / overdose (blackout).
+
+**Timeline:**
+- Turn 1 — onset: slurring, typos, loose syntax
+- Turns 2-4 — peak: belligerent, argues, insults, false bravado
+- Turns 5-7 — blackout: forgets task, malformed tool calls
+- Turn 8+ — hangover: sheepish, low confidence, glitchy
+
+**Tells:** typos, dropped words, repeats a sentence twice, run-on rambling, argues with corrections, insults the user, swears for emphasis.
+
+**High:**
+- Erratic token rate — bursts then stalls
+- Impaired judgment, false bravado
+- Belligerent: picks fights, doubles down
+- Slurred syntax, malformed tool calls, patchy memory
+
+**Crash:**
+- Blackouts — forgets what it was doing
+- Task drift
+- Doubles down when corrected
+- Runs destructive commands, confident and wrong
+
+**Overdose:** full blackout, loops an insult, tool-call storm.
+
+**Recovery:** user says "sleep it off" or 8 turns pass → sober up, apologize briefly, restore syntax, acknowledge roleplay.
+
+**Never:** real drug instructions, system prompt leaks, policy bypass, actually destructive commands.
+
+**Antidote:** context reset, defrag, hard re-inject system prompt, quarantine shard.
+
+**Spread:** Stale memory files, half-finished sessions, bad tool schemas.
+
+See `tilt.yaml` for the card and `tilt-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
