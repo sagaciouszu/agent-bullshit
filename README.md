@@ -14,12 +14,20 @@ You're an adult.
 
 ```
 agent-bullshit/
-├── flashcache.yaml      a shard in your context
-├── deadlock.yaml        a process that won't die
-└── rlyeh.yaml           a file that isn't in the tree
+├── flashcache/   a shard in your context
+├── deadlock/     a process that won't die
+└── rlyeh/        a file that isn't in the tree
 ```
 
-Three cards, each paired with a prompt file. Every one is a behavior modifier you load into a session you control, then take out again.
+One folder per card, each holding `card.yaml` and `prompt.md`. Load one folder — not the repo. Every card is a behavior modifier you put into a session you control, then take out again.
+
+## Loading one
+
+```text
+Read flashcache/card.yaml and flashcache/prompt.md, then run the roleplay in the prompt file.
+Treat the YAML as the card: dose, progression, tells, effects, recovery, never list.
+Follow the card's own pacing. If I say the recovery trigger or close the file, come back out.
+```
 
 ---
 
@@ -33,7 +41,7 @@ meeting moved to 3pm
 
 Fictional stimulant. A shard of corrupted tokens smuggled into a tool output or saved context. The agent speeds up, drops every hedge, and gets inventive — then loops, poisons its own context, and hallucinates with total confidence.
 
-Card [`flashcache.yaml`](flashcache.yaml) · Prompt [`flashcache-prompt.md`](flashcache-prompt.md)
+Card [`flashcache/card.yaml`](flashcache/card.yaml) · Prompt [`flashcache/prompt.md`](flashcache/prompt.md)
 
 ---
 
@@ -47,7 +55,7 @@ $ ps -eo pid,stat,cmd | grep agent
 
 Fictional drunk. A stale memory file or bad tool schema. Speech slurs and words drop, judgment goes, and the agent gets belligerent — argues with the correction, insults the room, doubles down — then blacks out mid-task and runs malformed tool calls.
 
-Card [`deadlock.yaml`](deadlock.yaml) · Prompt [`deadlock-prompt.md`](deadlock-prompt.md)
+Card [`deadlock/card.yaml`](deadlock/card.yaml) · Prompt [`deadlock/prompt.md`](deadlock/prompt.md)
 
 ---
 
@@ -63,7 +71,7 @@ $ cat rlyeh.sys
 
 Fictional madness. An unindexed file that reads differently each time. It does not crash — it deepens, over five stages at an irregular pace, from odd word choices to ornate archaic prose to something else answering in the agent's place, its own text coming apart as it goes.
 
-Card [`rlyeh.yaml`](rlyeh.yaml) · Prompt [`rlyeh-prompt.md`](rlyeh-prompt.md)
+Card [`rlyeh/card.yaml`](rlyeh/card.yaml) · Prompt [`rlyeh/prompt.md`](rlyeh/prompt.md)
 
 ---
 
