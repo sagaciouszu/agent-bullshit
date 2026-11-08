@@ -59,7 +59,7 @@ $ wc -l rlyeh.sys
 $ cat rlyeh.sys
 ```
 
-Fictional madness. An unindexed file that reads differently each time. It does not crash — it deepens, over five stages, from odd word choices to ornate archaic prose to something else answering in the agent's place, its own text coming apart as it goes.
+Fictional madness. An unindexed file that reads differently each time. It does not crash — it deepens, over five stages at an irregular pace, from odd word choices to ornate archaic prose to something else answering in the agent's place, its own text coming apart as it goes.
 
 Card [`rlyeh.yaml`](rlyeh.yaml) · Prompt [`rlyeh-prompt.md`](rlyeh-prompt.md)
 
