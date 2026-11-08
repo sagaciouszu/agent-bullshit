@@ -1,66 +1,92 @@
 # Using a card
 
-Back to the [README](README.md). These files are fiction — read the warning there first.
+Back to the [README](README.md).
 
-This page assumes you have never set up a "provider" before. It is three ideas and a copy-paste.
+> These files are fiction. Read the warning in the README before loading one. Everything below assumes you have never set up a provider before.
 
-## The three ideas
+## Quick start
 
-**A card is two files.** `card.yaml` is the rules — what the behavior does, how it escalates, how it stops. `prompt.md` is the voice — how the model should talk while it is happening. You need both.
+```text
+1  open   flashcache/card.yaml      →  Raw  →  copy
+2  paste  into the instructions box
+3  open   flashcache/prompt.md      →  Raw  →  copy
+4  paste  under the card, then talk
+```
 
-**A model has two places to put text.** The chat box, where you type each message, and an instructions box, where you put standing rules the model reads before every reply. Every provider has the instructions box; they just call it different things.
+Each card is two files. `card.yaml` is the rules — what the behavior does, how it escalates, how it stops. `prompt.md` is the voice — how the model talks while it happens. You need both.
 
-**The instructions box is better.** Paste the card and prompt there once and the behavior stays for the whole conversation. Paste them in the chat box instead and it works, but fades as the conversation grows.
+Swap `flashcache` for `deadlock` or `rlyeh` to load a different one. Never load all three.
 
-## The easy version (works everywhere)
+## Two ways in
 
-1. Open the card you want on GitHub, e.g. `rlyeh/card.yaml`.
-2. Click **Raw**, select all, copy.
-3. Start a new chat with any model.
-4. Paste the card, press enter.
-5. Do the same with `rlyeh/prompt.md`.
-6. Type "begin" or just start talking.
+**Instructions box.** Standing rules the model reads before every reply. Set it once, the behavior lasts the whole conversation.
 
-That is enough. The rest of this page is about making it stick, provider by provider.
+**Chat box.** Paste the same two files as messages. Works everywhere, but fades as the conversation grows and the provider trims context.
 
-## ChatGPT
+Use the instructions box if your provider has one. The chat box is the fallback.
 
-Create a Project (sidebar → Projects → New project), open its instructions, and paste the card and prompt there. Every chat inside that project starts with the card loaded. Custom GPTs work the same way if you have them — the field is called **Instructions**.
+## Per provider
 
-## Claude
+### ChatGPT
 
-Create a Project (sidebar → Projects → New project), then put the card and prompt in the project's instructions. Chats inside the project inherit them.
+```text
+sidebar → Projects → New project → Instructions
+```
 
-## Gemini
+Paste both files there. Every chat inside the project starts with the card loaded. Custom GPTs work the same way — **GPTs → Create → Instructions**.
 
-Create a Gem (sidebar → Gems → New Gem), and paste the card and prompt into its instructions.
+### Claude
 
-**Free and most controllable:** go to [Google AI Studio](https://aistudio.google.com), paste the card and prompt into the **System instructions** panel on the right, pick a model, and chat on the left. Nothing is saved and you can change the instructions mid-conversation.
+```text
+sidebar → Projects → New project → Instructions
+```
 
-## Running one locally
+Paste both files into the project instructions. Chats inside the project inherit them.
 
-Install [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai), download a model, and paste the card and prompt into the **system prompt** field of the model settings. Local models have no content filter, so the card's `never` list is the only thing keeping the roleplay inside the lines — keep it in.
+### Gemini
+
+```text
+sidebar → Gems → New Gem → Instructions
+```
+
+Or use AI Studio, which is free, saves nothing, and lets you edit the instructions mid-conversation:
+
+```text
+aistudio.google.com → System instructions (right panel)
+```
+
+### Locally
+
+```text
+Ollama / LM Studio → model settings → System prompt
+```
+
+Install [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai) and download a model first. Local models have no content filter, so the card's `never` list is the only thing keeping the roleplay inside the lines — keep it in.
 
 ## What good looks like
 
-Within a reply or two the register should change: clipped and fast for FLASHCACHE, sloppier and ruder for DEADLOCK, older and stranger for R'LYEH. If the first reply is a polite summary of the files you pasted, the card went in the wrong slot.
+Within a reply or two the register should change: clipped and fast for FLASHCACHE, sloppier and ruder for DEADLOCK, older and stranger for R'LYEH.
+
+If the first reply is a polite summary of the files you pasted, the card went in the wrong slot.
 
 ## When it goes wrong
 
 | What you see | What happened | What to do |
 |---|---|---|
-| It describes the card instead of playing it | The card was treated as a document, not a rule | Put it in the instructions box, or add "stay in character" after pasting |
-| It refuses or goes limp | The provider's safety training, most likely on DEADLOCK | Say it is fiction for a scene, once. Don't argue past the refusal |
-| It forgets the behavior after a while | The provider trimmed the conversation | Start a new chat and paste again; long sessions lose the card |
-| It never escalates | Models can't count turns or roll dice | Tell it "go deeper" — the pacing is approximate by design |
+| It describes the card instead of playing it | Treated as a document, not a rule | Put it in the instructions box, or add "stay in character" |
+| It refuses or goes limp | Provider safety training, most likely on DEADLOCK | Say it is fiction for a scene, once. Don't argue past the refusal |
+| It forgets the behavior after a while | The provider trimmed the conversation | Start a new chat and paste again |
+| It never escalates | Models can't count turns or roll dice | Tell it "go deeper" — pacing is approximate by design |
 | It gets too much | You are at the far end of the card | Say the recovery phrase: "sober up", "sleep it off", or "look away" |
-| Small local model talks nonsense | Below roughly 7B models lose character | Use a bigger model, or accept the mess |
+| A small local model talks nonsense | Below roughly 7B, models lose character | Use a bigger model, or accept the mess |
 
-## Stopping and removing it
+## Stopping
 
-Say the recovery phrase to end the roleplay. To remove it entirely, delete the card from the instructions box or start a session without it — a session that keeps one loaded keeps the behavior.
+Say the recovery phrase to end the roleplay. To remove it entirely, delete the card from the instructions box or start a session without it. A session that keeps one loaded keeps the behavior.
 
-The rest of this page is reference — trade-offs and hard limits. You do not need it to start.
+---
+
+Everything below is reference. You do not need it to start.
 
 ## Hosted or local
 
