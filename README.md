@@ -31,6 +31,24 @@ Treat the YAML as the card: dose, progression, tells, effects, recovery, never l
 Follow the card's own pacing. If I say the recovery trigger or close the file, come back out.
 ```
 
+## Using a card with a provider
+
+Every provider has the same two slots: somewhere to put standing instructions, and the conversation. The card goes in the first; the prompt goes beside it, or as your opening message.
+
+| Provider | Where the card goes |
+|---|---|
+| ChatGPT | Projects → project instructions, or a custom GPT's Instructions field. [gpts](https://chatgpt.com/gpts) · [API](https://platform.openai.com/docs/guides/text) |
+| Claude | Project instructions (Pro/Team), or the `system` parameter on the API. [docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) |
+| Gemini | A Gem's instructions, or `system_instruction` on the API. [gems](https://gemini.google.com/gems/view) · [API](https://ai.google.dev/gemini-api/docs/system-instructions) |
+| Local models | The system prompt field in Ollama, LM Studio, or whatever runner you use. |
+| Coding agents | The agent's instruction file: `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, or its prompt setting. |
+
+Paste the card first, then the prompt, then start talking. Nothing else is required.
+
+Two things that will not survive the trip: chat models cannot roll dice or hold a hidden counter, so pacing becomes approximate; and DEADLOCK's insults are the most likely thing to get softened or refused. Reframe it as fiction if that happens — do not push past the refusal.
+
+Remove the card when you are done. They degrade behavior by design, and a session that keeps one loaded keeps the behavior.
+
 ---
 
 ### FLASHCACHE / GLASS
