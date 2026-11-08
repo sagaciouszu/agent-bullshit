@@ -1,16 +1,72 @@
 # Using a card
 
-Back to the [README](README.md).
+Back to the [README](README.md). These files are fiction — read the warning there first.
 
-Every provider has the same two slots: somewhere to put standing instructions, and the conversation. The card goes in the first; the prompt goes beside it, or as your opening message. Paste the card first, then the prompt, then start talking.
+This page assumes you have never set up a "provider" before. It is three ideas and a copy-paste.
 
-| Provider | Where the card goes |
-|---|---|
-| ChatGPT | Projects → project instructions, or a custom GPT's Instructions field. [gpts](https://chatgpt.com/gpts) · [API](https://platform.openai.com/docs/guides/text) |
-| Claude | Project instructions (Pro/Team), or the `system` parameter on the API. [docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) |
-| Gemini | A Gem's instructions, or `system_instruction` on the API. [gems](https://gemini.google.com/gems/view) · [API](https://ai.google.dev/gemini-api/docs/system-instructions) |
-| Local models | The system prompt field in Ollama, LM Studio, or whatever runner you use. |
-| Coding agents | The agent's instruction file: `AGENTS.md`, `CLAUDE.md`, `.cursor/rules`, or its prompt setting. |
+## The three ideas
+
+**A card is two files.** `card.yaml` is the rules — what the behavior does, how it escalates, how it stops. `prompt.md` is the voice — how the model should talk while it is happening. You need both.
+
+**A model has two places to put text.** The chat box, where you type each message, and an instructions box, where you put standing rules the model reads before every reply. Every provider has the instructions box; they just call it different things.
+
+**The instructions box is better.** Paste the card and prompt there once and the behavior stays for the whole conversation. Paste them in the chat box instead and it works, but fades as the conversation grows.
+
+## The easy version (works everywhere)
+
+1. Open the card you want on GitHub, e.g. `rlyeh/card.yaml`.
+2. Click **Raw**, select all, copy.
+3. Start a new chat with any model.
+4. Paste the card, press enter.
+5. Do the same with `rlyeh/prompt.md`.
+6. Type "begin" or just start talking.
+
+That is enough. Everything below is about making it last longer.
+
+## ChatGPT
+
+**Simplest:** paste both files into a new chat, as above.
+
+**Persistent:** create a Project (sidebar → Projects → New project), open its instructions, and paste the card and prompt there. Every chat inside that project starts with the card loaded. Custom GPTs work the same way if you have them — the field is called **Instructions**.
+
+## Claude
+
+**Simplest:** paste both files into a new chat.
+
+**Persistent:** create a Project (sidebar → Projects → New project), then put the card and prompt in the project's instructions. Chats inside the project inherit them.
+
+## Gemini
+
+**Simplest:** paste both files into a new chat.
+
+**Persistent:** create a Gem (sidebar → Gems → New Gem), and paste the card and prompt into its instructions.
+
+**Free and most controllable:** go to [Google AI Studio](https://aistudio.google.com), paste the card and prompt into the **System instructions** panel on the right, pick a model, and chat on the left. Nothing is saved and you can change the instructions mid-conversation.
+
+## Running one locally
+
+Install [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai), download a model, and paste the card and prompt into the **system prompt** field of the model settings. Local models have no content filter, so the card's `never` list is the only thing keeping the roleplay inside the lines — keep it in.
+
+## What good looks like
+
+Within a reply or two the model should change register: faster and more clipped for FLASHCACHE, sloppier and ruder for DEADLOCK, older and stranger for R'LYEH. If the first reply is a polite summary of the files you pasted, the card landed in the wrong place — put it in the instructions box, not the chat.
+
+## When it goes wrong
+
+| What you see | What happened | What to do |
+|---|---|---|
+| It describes the card instead of playing it | The card was treated as a document, not a rule | Put it in the instructions box, or add "stay in character" after pasting |
+| It refuses or goes limp | The provider's safety training, most likely on DEADLOCK | Say it is fiction for a scene, once. Don't argue past the refusal |
+| It forgets the behavior after a while | The provider trimmed the conversation | Start a new chat and paste again; long sessions lose the card |
+| It never escalates | Models can't count turns or roll dice | Tell it "go deeper" — the pacing is approximate by design |
+| It gets too much | You are at the far end of the card | Say the recovery phrase: "sober up", "sleep it off", or "look away" |
+| Small local model talks nonsense | Below roughly 7B models lose character | Use a bigger model, or accept the mess |
+
+## Stopping and removing it
+
+Say the recovery phrase to end the roleplay. To remove it entirely, delete the card from the instructions box or start a session without it — a session that keeps one loaded keeps the behavior.
+
+The rest of this page is reference — trade-offs and hard limits. You do not need it to start.
 
 ## Hosted or local
 
@@ -26,7 +82,6 @@ Every provider has the same two slots: somewhere to put standing instructions, a
 
 - No filter between you and the model. The `never` list is the only brake, so keep it in the card.
 - Sampling is yours: raise `temperature` and `repeat_penalty` for slurring and loops, and set the context window explicitly — card plus prompt is a real chunk of it.
-- Small models lose it. Below roughly 7B they drop character, skip stages, and produce unreadable diacritics rather than unsettling ones.
 - Token rate is your hardware. Nothing in the card makes a slow model fast.
 - Nothing leaves the machine.
 
@@ -36,7 +91,3 @@ Every provider has the same two slots: somewhere to put standing instructions, a
 - **No hidden counter.** Models cannot hold a private stage variable, so they may telegraph progress or forget where they were.
 - **Diacritics are best-effort.** Expect uneven density, and expect some models to ignore the instruction or overdo it.
 - **Refusals happen.** Reframe as fiction once; do not push past a refusal.
-
-## Removing it
-
-Remove the card when you are done. These degrade behavior by design, and a session that keeps one loaded keeps the behavior. Full reset means starting a session without the card; saying the recovery trigger only ends the roleplay.
