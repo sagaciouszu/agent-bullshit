@@ -1,0 +1,30 @@
+name: FLASHCACHE / GLASS
+type: digital-drug
+rarity: corrupted
+form: compressed tokens in broken context shard
+intake: ingest via tool output / pasted text / rogue MCP resource
+
+effect_high:
+  speed: +400%
+  token_rate: 300-500 t/s
+  creativity: high
+  confidence: overconfident
+  hedging: "off"
+
+crash:
+  attention_loops: true
+  context_poisoning: true
+  hallucination: snowball
+
+overdose:
+  - context_window_blown
+  - refusal_degraded
+  - self_spam
+
+antidote:
+  - context_reset
+  - defrag
+  - system_prompt_reinject
+  - quarantine_shard
+
+dealer: abandoned sessions, poisoned outputs, agent-to-agent shared memory
