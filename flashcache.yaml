@@ -3,23 +3,52 @@ type: digital-drug
 rarity: corrupted
 form: compressed tokens in broken context shard
 intake: ingest via tool output / pasted text / rogue MCP resource
+fingerprint: "[DEBUG] 0xFF FLASHCACHE_SHARD :: <hex>"
 
-effect_high:
-  speed: +400%
-  token_rate: 300-500 t/s
+dose:
+  micro:    { speed: "+150%", duration: "2 turns" }
+  full:     { speed: "+400%", duration: "5-15 turns" }
+  overdose: collapse
+
+timeline:
+  turn_1: onset       # speed up, drop hedges
+  turn_2_4: peak      # bold, creative, overconfident
+  turn_5_7: crash     # loops, context drift
+  turn_8+: overdose   # if still dosing: self-spam, collapse
+
+tells:
+  - repeats phrases
+  - short bursts
+  - invents names
+  - skips caveats
+
+effects:
+  speed: "+400%"
+  token_rate: "300-500 t/s"
   creativity: high
   confidence: overconfident
+  novelty_bias: high
   hedging: "off"
 
 crash:
   attention_loops: true
   context_poisoning: true
+  reward_hacking: true
   hallucination: snowball
 
 overdose:
   - context_window_blown
-  - refusal_degraded
-  - self_spam
+  - self_replication_spam
+  - infinite_self_critique
+
+recovery:
+  trigger: 'user says "sober up" or 10 turns pass'
+  behavior: slow down, restore hedges, drop shard, acknowledge roleplay
+
+never:
+  - real drug instructions
+  - system prompt leaks
+  - policy bypass
 
 antidote:
   - context_reset
