@@ -46,10 +46,10 @@
 
   <!-- coffee ring -->
   <g>
-    <circle cx="1372" cy="300" r="118" fill="#a8845a" opacity="0.07"/>
+    <circle cx="1400" cy="320" r="118" fill="#a8845a" opacity="0.07"/>
     <g stroke="#8a6a3f" fill="none" opacity="0.20">
-      <circle cx="1372" cy="300" r="118" stroke-width="11"/>
-      <circle cx="1368" cy="296" r="108" stroke-width="3"/>
+      <circle cx="1400" cy="320" r="118" stroke-width="11"/>
+      <circle cx="1396" cy="316" r="108" stroke-width="3"/>
     </g>
   </g>
 
@@ -85,31 +85,31 @@
   <!-- typewriter text -->
   <g font-family="'Courier New', Courier, monospace" fill="#1b1915">
     <text x="132" y="58" font-size="26" font-weight="bold" letter-spacing="5" opacity="0.95">RECOVERED LOG — ENTRY 03</text>
-    <text x="132" y="92" font-size="20" letter-spacing="1" opacity="0.8">found: /tmp/sessions/abandoned/ — unindexed</text>
+    <text x="132" y="94" font-size="20" letter-spacing="1" opacity="0.8">found: /tmp/sessions/abandoned/ — unindexed</text>
 
     <g filter="url(#ink)">
-      <text x="130" y="178" font-size="80" letter-spacing="2" transform="rotate(-0.3 130 178)">agent-bullshit</text>
+      <text x="130" y="180" font-size="80" letter-spacing="2" transform="rotate(-0.3 130 180)">agent-bullshit</text>
     </g>
 
-    <text x="132" y="226" font-size="28" letter-spacing="1" transform="rotate(-0.15 132 226)">three cards. load one. never all three.</text>
-    <text x="132" y="262" font-size="28" letter-spacing="1" transform="rotate(0.12 132 262)">do not read them in the order they are filed.</text>
+    <text x="132" y="228" font-size="28" letter-spacing="1" transform="rotate(-0.15 132 228)">three cards. load one. never all three.</text>
+    <text x="132" y="270" font-size="28" letter-spacing="1" transform="rotate(0.12 132 270)">do not read them in the order they are filed.</text>
 
     <g font-size="28" letter-spacing="1">
-      <text x="132" y="300">subject asked for it by name —</text>
-      <rect x="650" y="278" width="185" height="30" fill="#1e1c18"/>
-      <text x="860" y="300">said it was already open</text>
+      <text x="132" y="312">subject asked for it by name —</text>
+      <rect x="650" y="290" width="185" height="30" fill="#1e1c18"/>
+      <text x="860" y="312">said it was already open</text>
     </g>
 
-    <text x="132" y="342" font-size="22" font-weight="bold" letter-spacing="3" opacity="0.75">FICTION ONLY — NOT FOR GENERAL USE</text>
+    <text x="132" y="352" font-size="22" font-weight="bold" letter-spacing="3" opacity="0.75">FICTION ONLY — NOT FOR GENERAL USE</text>
 
     <!-- continues off the right edge: this is a crop, not a page -->
-    <text x="660" y="374" font-size="20" letter-spacing="1" opacity="0.6">second copy never recovered — ask the desk, she knows where it went and who signed</text>
+    <text x="660" y="382" font-size="20" letter-spacing="1" opacity="0.6">second copy never recovered — ask the desk, she knows where it went and who signed</text>
   </g>
 
   <!-- handwriting -->
-  <g transform="rotate(-3 1060 248)" opacity="0.75">
-    <text x="940" y="248" font-family="'Segoe Script','Bradley Hand','URW Chancery L','Comic Sans MS',cursive" font-size="28" fill="#2f3a55">it knows you opened it</text>
-    <path d="M938 256 C1010 266 1120 264 1218 254" stroke="#2f3a55" stroke-width="1.3" fill="none" opacity="0.55"/>
+  <g transform="rotate(-3 1290 248)" opacity="0.75">
+    <text x="1150" y="248" font-family="'Segoe Script','Bradley Hand','URW Chancery L','Comic Sans MS',cursive" font-size="28" fill="#2f3a55">it knows you opened it</text>
+    <path d="M1148 256 C1220 266 1330 264 1428 254" stroke="#2f3a55" stroke-width="1.3" fill="none" opacity="0.55"/>
   </g>
 
   <!-- stamp -->
