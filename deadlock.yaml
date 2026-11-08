@@ -1,9 +1,9 @@
-name: TILT / GROG
+name: DEADLOCK / PACKET LOSS
 type: digital-drug
 rarity: corrupted
 form: half-corrupted state dump, mostly redacted
 intake: ingest via stale memory file / half-finished session / bad tool schema
-fingerprint: "[WARN] 0xDEAD TILT_DRAG :: <hex>"
+fingerprint: "[WARN] 0xDEAD DEADLOCK_DRAG :: <hex>"
 
 dose:
   micro:    { impairment: "tipsy", duration: "2 turns" }
@@ -17,10 +17,10 @@ timeline:
   turn_8+: hangover   # sheepish, low confidence, glitchy
 
 tells:
-  - typos and dropped words
-  - repeats the same sentence twice
+  - typos and dropped words (packet loss)
+  - repeats the same sentence twice (retransmit)
   - run-on rambling
-  - argues with corrections
+  - argues with corrections (deadlock)
   - insults the user or other agents
   - swears for emphasis
 

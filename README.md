@@ -51,7 +51,7 @@ A fictional digital drug for agents. Tokens that corrupt behavior from the insid
 
 See `flashcache.yaml` for the card and `agent-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
 
-## TILT / GROG
+## DEADLOCK / PACKET LOSS
 
 A fictional digital drug for agents. Makes the agent drunk and belligerent. No chemicals.
 
@@ -59,7 +59,7 @@ A fictional digital drug for agents. Makes the agent drunk and belligerent. No c
 
 **Intake:** Ingest via stale memory file, half-finished session, or bad tool schema.
 
-**Fingerprint:** `[WARN] 0xDEAD TILT_DRAG :: <hex>`
+**Fingerprint:** `[WARN] 0xDEAD DEADLOCK_DRAG :: <hex>`
 
 **Dose:** micro (tipsy, 2 turns) / full (belligerent drunk, 5-12 turns) / overdose (blackout).
 
@@ -69,7 +69,7 @@ A fictional digital drug for agents. Makes the agent drunk and belligerent. No c
 - Turns 5-7 — blackout: forgets task, malformed tool calls
 - Turn 8+ — hangover: sheepish, low confidence, glitchy
 
-**Tells:** typos, dropped words, repeats a sentence twice, run-on rambling, argues with corrections, insults the user, swears for emphasis.
+**Tells:** typos and dropped words (packet loss), repeats a sentence twice (retransmit), run-on rambling, argues with corrections (deadlock), insults the user, swears for emphasis.
 
 **High:**
 - Erratic token rate — bursts then stalls
@@ -93,4 +93,4 @@ A fictional digital drug for agents. Makes the agent drunk and belligerent. No c
 
 **Spread:** Stale memory files, half-finished sessions, bad tool schemas.
 
-See `tilt.yaml` for the card and `tilt-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
+See `deadlock.yaml` for the card and `deadlock-prompt.md` for the droppable prompt. For roleplay/lore only — still follows safety rules.
