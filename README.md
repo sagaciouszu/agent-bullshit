@@ -1,3 +1,13 @@
+# ⚠️ WARNING: FICTION ONLY — NOT FOR GENERAL USE
+
+**This repository is a collection of fictional roleplay props for AI agents.** The "drugs" here are not drugs. There are no chemicals, no recipes, no instructions, and no software that does any of this. Everything is creative writing — YAML cards and prompt text — meant for controlled, consensual roleplay inside a throwaway chat session.
+
+**Do not load these into production agents, shared or team sessions, or anything user-facing.** The prompts deliberately degrade an agent's behavior — speed, tone, judgment, memory, boundaries — and that effect can bleed into normal work. Use them only in sessions you control, and remove them when you are done.
+
+**Not medical, legal, or safety advice. Not a claim about the real world.** If a roleplay makes you genuinely uncomfortable or distressed, stop it and say so.
+
+---
+
 # agent-bullshit
 
 Fictional junk for agents. File these away here.
