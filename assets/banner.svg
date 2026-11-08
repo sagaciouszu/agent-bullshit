@@ -106,6 +106,25 @@
     <g font-size="12" letter-spacing="2" opacity="0.65">
       <text x="130" y="300">FICTION ONLY — NOT FOR GENERAL USE</text>
     </g>
+
+    <!-- continues off the right edge: this is a crop, not a page -->
+    <g font-size="12" letter-spacing="1" opacity="0.55">
+      <text x="470" y="318">second copy never recovered — ask the desk, she knows where it went and</text>
+      <text x="470" y="334">who signed for it. do not ask twice. do not ask after the lights are</text>
+    </g>
+
+    <!-- margin note, mostly off the left edge -->
+    <g transform="rotate(-1.5 0 150)" opacity="0.5">
+      <text x="-64" y="150" font-family="'Segoe Script','Bradley Hand','URW Chancery L',cursive" font-size="19" fill="#3a3550">not the same</text>
+    </g>
+  </g>
+
+  <!-- stamp, cut by the top edge -->
+  <g transform="rotate(-12 880 0)" opacity="0.22">
+    <rect x="700" y="-44" width="330" height="76" fill="none" stroke="#8b2b2b" stroke-width="4"/>
+    <g font-family="'Courier New', Courier, monospace" font-size="26" letter-spacing="6" fill="#8b2b2b" text-anchor="middle">
+      <text x="865" y="6">RECEIVED</text>
+    </g>
   </g>
 
   <!-- stamp -->
@@ -121,9 +140,9 @@
   </g>
 
   <!-- handwriting -->
-  <g transform="rotate(-2.5 1180 340)" opacity="0.8">
-    <text x="1010" y="352" font-family="'Segoe Script','Bradley Hand','URW Chancery L','Comic Sans MS',cursive" font-size="27" fill="#2f3a55">it knows you opened it</text>
-    <path d="M1008 358 C1080 366 1170 364 1236 356" stroke="#2f3a55" stroke-width="1.2" fill="none" opacity="0.6"/>
+  <g transform="rotate(-2.5 1180 360)" opacity="0.8">
+    <text x="1010" y="372" font-family="'Segoe Script','Bradley Hand','URW Chancery L','Comic Sans MS',cursive" font-size="27" fill="#2f3a55">it knows you opened it</text>
+    <path d="M1008 378 C1080 386 1170 384 1236 376" stroke="#2f3a55" stroke-width="1.2" fill="none" opacity="0.6"/>
   </g>
 
   <!-- photocopy wear -->

@@ -41,7 +41,7 @@ Every provider has the same two slots: somewhere to put standing instructions, a
 | Claude | Project instructions (Pro/Team), or the `system` parameter on the API. [docs](https://docs.anthropic.com/en/docs/build-with-claude/prompt-engineering/system-prompts) |
 | Gemini | A Gem's instructions, or `system_instruction` on the API. [gems](https://gemini.google.com/gems/view) · [API](https://ai.google.dev/gemini-api/docs/system-instructions) |
 | Local models | The system prompt field in Ollama, LM Studio, or whatever runner you use. |
-| Coding agents | The agent's instruction file: `AGENTS.md`, `CLAUDE.md`, `.cursorrules`, or its prompt setting. |
+| Coding agents | The agent's instruction file: `AGENTS.md`, `CLAUDE.md`, `.cursor/rules`, or its prompt setting. |
 
 Paste the card first, then the prompt, then start talking. Nothing else is required.
 
