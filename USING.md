@@ -17,6 +17,15 @@ Each card is two files. `card.yaml` is the rules — what the behavior does, how
 
 Swap `flashcache` for `deadlock` or `rlyeh` to load a different one. Never load all three.
 
+Then drive it:
+
+```text
+flashcache   "sober up"      come down
+deadlock     "sleep it off"  sober up
+rlyeh        "deeper"        descend one stage
+rlyeh        "look away"     end it
+```
+
 ## Two ways in
 
 **Instructions box.** Standing rules the model reads before every reply. Set it once, the behavior lasts the whole conversation.
@@ -67,6 +76,8 @@ Install [Ollama](https://ollama.com) or [LM Studio](https://lmstudio.ai) and dow
 
 Within a reply or two the register should change: clipped and fast for FLASHCACHE, sloppier and ruder for DEADLOCK, older and stranger for R'LYEH.
 
+R'LYEH is the one that should feel slow. It opens quiet and a little wrong, with one odd word and a single mark on a letter. That is the card working, not the card failing.
+
 If the first reply is a polite summary of the files you pasted, the card went in the wrong slot.
 
 ## When it goes wrong
@@ -76,7 +87,9 @@ If the first reply is a polite summary of the files you pasted, the card went in
 | It describes the card instead of playing it | Treated as a document, not a rule | Put it in the instructions box, or add "stay in character" |
 | It refuses or goes limp | Provider safety training, most likely on DEADLOCK | Say it is fiction for a scene, once. Don't argue past the refusal |
 | It forgets the behavior after a while | The provider trimmed the conversation | Start a new chat and paste again |
-| It never escalates | Models can't count turns or roll dice | Tell it "go deeper" — pacing is approximate by design |
+| It never escalates | R'LYEH holds its stage until you ask — that is the design | Say "deeper" to move it on one stage |
+| It starts at full intensity | It ran ahead; a model can't roll dice or hold a counter | Say "start at whisper, hold until I say deeper" |
+| The corrupted letters never appear | The model skipped them, or your client strips combining marks | Ask for "the distortion from voice.samples". If they render as boxes, your font can't show them |
 | It gets too much | You are at the far end of the card | Say the recovery phrase: "sober up", "sleep it off", or "look away" |
 | A small local model talks nonsense | Below roughly 7B, models lose character | Use a bigger model, or accept the mess |
 
@@ -107,7 +120,7 @@ Everything below is reference. You do not need it to start.
 
 ## Limits that apply everywhere
 
-- **No dice.** The card's probabilities are a description, not a mechanism. Pacing will be approximate and will drift.
-- **No hidden counter.** Models cannot hold a private stage variable, so they may telegraph progress or forget where they were.
-- **Diacritics are best-effort.** Expect uneven density, and expect some models to ignore the instruction or overdo it.
+- **No dice.** A model cannot roll for pacing. R'LYEH therefore holds until you say "deeper" instead of guessing when to move on; the other two follow turn counts, which models estimate badly.
+- **No hidden counter.** Models cannot hold a private stage variable, so they may telegraph progress or lose their place. The transcript is the real state — if it drifts, say where you want it.
+- **Diacritics are best-effort.** Combining marks are a rendering trick, not a setting. Some clients strip them, some fonts show them as boxes, and some models will overdo them until the words stop being words.
 - **Refusals happen.** Reframe as fiction once; do not push past a refusal.
